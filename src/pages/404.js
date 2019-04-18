@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { Link } from 'gatsby'
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
+    <div className='has-text-centered'>
       <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <p>Sorry, this page doesn't exist. You should head back <Link to='/' title='Home'>HOME</Link> and try to figure things out from there.</p>
     </div>
   </Layout>
 )
