@@ -1,7 +1,7 @@
 {
   "name": "bpm-redesign",
   "description": "Brandon P Martin Portfolio Site",
-  "version": "0.1",
+  "version": "1.0.0",
   "author": "Brandon Martin",
   "dependencies": {
     "bulma": "^0.7.0",
