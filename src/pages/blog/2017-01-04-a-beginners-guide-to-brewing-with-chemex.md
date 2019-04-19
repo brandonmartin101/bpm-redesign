@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Test Post 2
+image: /img/ales-krivec-1881-unsplash.jpg
 date: 2019-04-18T05:00:00.000Z
 description: >-
   Brewing with a Chemex probably seems like a complicated, time-consuming
