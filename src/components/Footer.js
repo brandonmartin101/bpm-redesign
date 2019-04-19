@@ -15,7 +15,7 @@ const Footer = class extends React.Component {
                 <section>
                   <p>Curious about me? I'm a web developer in Oshkosh, WI, interested in React, Vue, Node, and other JavaScript-based frameworks. Reach out to me below!</p>
                   <a
-                    class="typeform-share button"
+                    className="typeform-share button"
                     href="https://brandonmartin1.typeform.com/to/ClfHiR"
                     data-mode="popup"
                     data-submit-close-delay="5" target="_blank"

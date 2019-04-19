@@ -12,6 +12,8 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  image,
+  imageDesc,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -25,6 +27,7 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt={imageDesc} />
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -51,6 +54,8 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  image: PropTypes.object,
+  imageDesc: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -74,6 +79,8 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        image={post.frontmatter.image}
+        imageDesc={post.frontmatter.imageDesc}
       />
     </Layout>
   )
@@ -93,6 +100,14 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageDesc
         date(formatString: "MMMM DD, YYYY")
         title
         description
