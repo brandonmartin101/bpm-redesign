@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Test Post 3
+image: /img/elke-karin-lugert-125493-unsplash.jpg
 date: 2019-04-18T05:00:00.000Z
 description: >-
   We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
