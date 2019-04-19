@@ -14,7 +14,15 @@ const Footer = class extends React.Component {
               <div className="column is-8 about-contact">
                 <section>
                   <p>Curious about me? I'm a web developer in Oshkosh, WI, interested in React, Vue, Node, and other JavaScript-based frameworks. Reach out to me below!</p>
-                  <p>Toss in the contact form here :)</p>
+                  <a
+                    class="typeform-share button"
+                    href="https://brandonmartin1.typeform.com/to/ClfHiR"
+                    data-mode="popup"
+                    data-submit-close-delay="5" target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contact Me
+                  </a>
                 </section>
               </div>
               <div className="column is-4 social has-text-right">

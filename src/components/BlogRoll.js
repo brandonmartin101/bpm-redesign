@@ -11,29 +11,26 @@ class BlogRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
-              <article className="tile is-child box notification">
-                <p>
-                  <Link
-                    className="title has-text-primary is-size-4"
-                    to={post.fields.slug}
-                  >
+            <div
+              className="is-parent column is-4"
+              key={post.id}
+              style={{
+                //backgroundImage: `url(${
+                //  !!post.frontmatter.image.childImageSharp ? post.frontmatter.image.childImageSharp.fluid.src : post.frontmatter.image
+                //  })`,
+                backgroundImage: `url(${post.frontmatter.image})`,
+              }}
+            >
+              <Link
+                className="title has-text-primary is-size-4"
+                to={post.fields.slug}
+              >
+                <article className="tile is-child box notification">
+                  <div>
                     {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
-                    {post.frontmatter.date}
-                  </span>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+                  </div>
+                </article>
+              </Link>
             </div>
           ))}
       </div>
@@ -65,6 +62,13 @@ export default () => (
                 slug
               }
               frontmatter {
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
