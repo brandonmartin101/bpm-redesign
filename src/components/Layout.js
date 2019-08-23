@@ -30,7 +30,10 @@ const TemplateWrapper = ({ children }) => {
 				<meta property="og:url" content="/" />
 				<meta property="og:image" content="/img/og-image.jpg" />
 
-				<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Oswald:500&display=swap" rel="stylesheet">
+				<link
+					href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Oswald:500&display=swap"
+					rel="stylesheet"
+				/>
 			</Helmet>
 			<header>
 				<Navbar />
