@@ -1,18 +1,141 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: hsl(200, 21%, 16%)
+$white: #fafafa
+$primary: hsl(200, 21%, 31%)
+$primary-invert: $white
+$white-ter: $white
 
-.navbar .navbar-menu
-  box-shadow:none !important
+@import "~bulma"
 
+::selection
+  color: $white
+  background: $primary
+::moz-selection
+  color: $white
+  background: $primary
+
+// Globals and Helpers
+body, button, input, textarea
+  font-family: "Oswald", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-weight: 700
+h1, h2, h3, h4, h5, h6
+  font-family: "Open Sans Condensed", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-weight: 700
+main
+  padding-top: 30px
+.button
+  margin-bottom: 1em
+  background-color: transparent
+  border-radius: 0
+  padding: 10px 20px
+.icon
+  width: 1.6rem
+  height: 1.6rem
+  img
+    width: 100%
+    max-width: 100%
+    height: 100%
+    max-height: 100%
+
+// Header
+header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.15)
+  h1
+    font-size: 8vw
+    font-weight: bold
+  .navbar.is-white .navbar-brand > a.navbar-item,
+  .navbar.is-white .navbar-end > a.navbar-item
+    transition: .2s
+  .navbar.is-white .navbar-brand > a.navbar-item:hover,
+  .navbar.is-white .navbar-end > a.navbar-item:hover
+    color: $white
+    background: $primary
+@media (min-width: 400px)
+  header
+    h1
+      font-size: 2em
+    .navbar-item:first-child
+      margin-right: 1em
+
+// Footer
+footer
+  padding: 70px 0 50px
+  .social a
+    margin: 0 15px
+    width: 1.6rem
+    height: 1.6rem
+    vertical-align: middle
+    display: inline-block
+  .portrait img
+    border-radius: 50%
+    width: 100%
+    height: 100%
+    max-width: 100px
+    max-height: 100px
+@media (min-width: 769px)
+  footer .portrait img
+    margin: 0 auto
+    display: block
+
+// Homepage
+.hero-wrap
+  display: flex
+  justify-content: space-around
+  flex-direction: column
+  padding: 65px 10px
+.posts
+  .column
+    height: 70vw
+    min-height: 200px
+article.full-link
+  width: 100%
+  height: 100%
+  background-size: cover
+  position: relative
+  z-index: 1
+  div
+    height: 100%
+    padding-top: 10%
+    text-shadow: 0 0 10px black
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #0009
+    z-index: -1
+    transition: .2s
+  &:hover::after
+    background: #0004
+@media (min-width: 600px)
+  .posts
+    .columns
+      display: grid;
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr
+      grid-template-areas: ". ."
+      .column
+        height: 35vw
+@media (min-width: 1000px)
+  .posts
+    .columns
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-rows: 1fr
+      grid-template-areas: '. . . .'
+      .column
+        height: 25vw
+
+// Portfolio Page
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -27,84 +150,3 @@ $black: #2b2523
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
-
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 200px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
-
-.full-width-image
-    width: 100vw
-    height: 200px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
-
-.btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
-
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem
-  background-color: transparent
-
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
-
-
-.menu-label
-  font-size: 1em !important
-  text-align: left
-.menu-list
-  list-style: none !important
-  text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
-
-@import "~bulma"
-@import "./style.sass"
