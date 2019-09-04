@@ -1,11 +1,15 @@
 ---
 templateKey: blog-post
-title: Test Post 2
-image: /img/ales-krivec-1881-unsplash.jpg
-imageDesc: test
+title: Kalie Martin Voice Studio
+image: /img/port-voice-original.png
+imageDesc: Screenshot of Kalie Martin Voice Studio
 date: 2019-09-03T05:00:00.000Z
 description: Test Post 2
 tags:
-  - test
+  - portfolio
+  - javascript
+  - html
+  - css
+  - turbolinks
 ---
 Test Post 2
