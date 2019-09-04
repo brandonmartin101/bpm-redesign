@@ -14,7 +14,7 @@ tags:
   - HTML
   - CSS
 ---
-The Task List is a good example of interactivity that can be used in online shopping carts or list managers. It has several options for adding, editing, deleting, and managing your tasks.
+The Task List is a good example of interactivity that can be used in online shopping carts or list managers. It has several options for adding, editing, deleting, and managing your tasks.
 
 Behind the app: React.js, Ant UI, and cookie management to store tasks locally.
 

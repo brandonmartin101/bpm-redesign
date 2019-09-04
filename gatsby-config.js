@@ -4,7 +4,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'Brandon Martin | Web Developer | Oshkosh WI',
 		description:
-			'This site is a personal portfolio site built on Gatsby, Netlify, and Netlify CMS through my Github integration.'
+			'I am a web developer in Oshkosh, WI. I love building fast, reactive, and secure sites to improve business outcomes. This site is a personal portfolio site built on Gatsby, Netlify, and Github.'
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

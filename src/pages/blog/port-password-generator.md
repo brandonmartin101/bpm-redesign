@@ -13,6 +13,6 @@ tags:
   - HTML
   - CSS
 ---
-Built with Node.js and Express, this app has various methods of creating passwords or passphrases.
+Built with Node.js and Express, this app has various methods of creating passwords or passphrases.
 
 A demo of this app is visible on [Glitch](https://bpm-password-gen.glitch.me/).

@@ -12,4 +12,4 @@ tags:
   - HTML
   - CSS
 ---
-This project was built for a local business. The site is built on a custom WordPress theme that integrates the site with the company's Facebook business page.
+This project was built for a local business. The site is built on a custom WordPress theme that integrates the site with the company's Facebook business page.
